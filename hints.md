@@ -1,5 +1,9 @@
 # Useful resources to develop assigned issues
 
+## Contribution guide file
+
+See the [contributing file](CONTRIBUTING.md) before start please.
+
 ## Composer package
 
 Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and 
