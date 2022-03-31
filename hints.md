@@ -20,7 +20,9 @@ To create a composer package the first step is to add in the root of the project
 Package *name* is the name the package will be available and generally speaking should be used as name space root in 
 association with the *autoload* section.
 
-Composer discourage the usage of package names that do not reflect the root name of the namespace to load.
+PSR-4 standard discourage the usage of package names that do not reflect the root name of the namespace to load.
+
+Additional resources on php standard recommendation are availabe here [https://www.php-fig.org/psr/psr-4/](https://www.php-fig.org/psr/psr-4/).
 
 E.G.
 
@@ -37,8 +39,8 @@ E.G.
 
 Means: *"Load the content of the directory src under the namespace Acme/Foobar"*.
 
-After this the package will be available on packages repository where it is registered on (like 
-[packagist](https://packagist.org)), with is name.
+After this, the package will be available on packages repository where it will be registered on (like 
+[packagist](https://packagist.org)), with is declared name.
 
 E.G.
 
@@ -73,8 +75,8 @@ Note: packagist does not automatically update the repository code unless you con
 
 ### Development dependencies 
 
-Composer offer a section called *require-dev* all of these dependencies grouped under require-dev, will be not installed
-unless the flag --require-dev is specified in install command.
+Composer offer a section called *require-dev*, that will group all the dependencie that will be skipped if the
+the flag --no-dev is specified in install command.
 
 ```bash
 # will install base dependencies
@@ -103,7 +105,7 @@ First create a .gitignore file in the root of the project:
 # Exclude vendor dir
 /vendor
 
-# Exclude composer lock (it is a library! no way we will cause vendor lock-in to users)
+# Exclude composer lock (it is a library! no way we will cause [vendor lock-in](https://it.wikipedia.org/wiki/Vendor_lock-in) to users)
 composer.lock
 
 # Exclude phpunit (no dist version, host version, if any)
@@ -115,7 +117,7 @@ phpunit.xml
 Create a .gitattributes file in the root of the project:
 
 ```gitexclude
-# Exclude build/test files from archive
+# Exclude build/test and doc files from archive
 /readme.md
 /.gitattributes   export-ignore
 /.gitignore       export-ignore
