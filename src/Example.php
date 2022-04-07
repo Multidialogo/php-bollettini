@@ -1,6 +1,6 @@
 <?php
 
-namespace mulidialogo\phpbollettini;
+namespace mulidialogo\phpbollettini\Example;
 
 class Example
 {
