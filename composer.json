@@ -1,8 +1,8 @@
 {
-  "name": "multidialogo/php-bollettini",
+  "name": "multidialogo/phpbollettini",
   "autoload": {
     "psr-4": {
-      "multidialogo\\php\\bollettini\\": "src/"
+      "multidialogo\\phpbollettini\\": "src/"
     }
   }
 }
