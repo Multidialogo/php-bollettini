@@ -2,7 +2,7 @@
   "name": "multidialogo/php-bollettini",
   "autoload": {
     "psr-4": {
-      "Multidialogo\\Php\\Bollettini\\": "src/"
+      "multidialogo\\php\\bollettini\\": "src/"
     }
   }
 }
